@@ -1,0 +1,13 @@
+const VITE_ENV = {
+  NEXTAUTH_URL: import.meta.env.VITE_NEXTAUTH_URL,
+  NEXTAUTH_SECRET: import.meta.env.VITE_NEXTAUTH_SECRET,
+  WORLDCOIN_APP_ID: import.meta.env.VITE_WORLDCOIN_APP_ID,
+  WORLDCOIN_APP_SECRET: import.meta.env.VITE_WORLDCOIN_APP_SECRET
+};
+
+export const authConfig = {
+  baseUrl: VITE_ENV.NEXTAUTH_URL,
+  secret: VITE_ENV.NEXTAUTH_SECRET,
+  worldcoinId: VITE_ENV.WORLDCOIN_APP_ID,
+  worldcoinSecret: VITE_ENV.WORLDCOIN_APP_SECRET
+};
